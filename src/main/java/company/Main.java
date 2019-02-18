@@ -17,7 +17,7 @@ public class Main {
         System.out.println(person1.hashCode() == person2.hashCode());
         System.out.println(person1.hashCode() == person3.hashCode());
 
-        Class klass1 = new Class(2);
+        Class klass1 = new Class(1);
         Student student1 = new Student(0001, "Tom", 20, klass1);
         Student student2 = new Student(0001, "Tom", 20, klass1);
         System.out.println(student1.introduce());
@@ -28,7 +28,7 @@ public class Main {
         System.out.println(klass1.getLeader().getName());
         System.out.println(student1.introduce());
 
-        Class klass2 = new Class(3);
+        Class klass2 = new Class(2);
         klass2.assignLeader(student1);
         klass2.appendMenber(student1);
         klass2.assignLeader(student1);
@@ -39,6 +39,12 @@ public class Main {
         Class[] classes = {klass1, klass2};
         teacher.setClasses(classes);
         System.out.println(teacher.introduce());
+
+        System.out.println(teacher.isTeaching(student1));
+        Class klass3 = new Class(3);
+        Student student3 = new Student(0001, "Tom", 20, klass3);
+        System.out.println(teacher.isTeaching(student3));
+
 
     }
 }

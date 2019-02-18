@@ -22,6 +22,14 @@ public class Teacher extends Person {
         return super.introduce() + "I am a Teacher. I teach Class " + String.join(",", teachedClass) + ".";
     }
 
+    public boolean isTeaching(Student student) {
+        boolean result = false;
+        for (Class klass : classes) {
+            result = result || klass.isIn(student);
+        }
+        return result;
+    }
+
     public Class[] getClasses() {
         return this.classes;
     }
