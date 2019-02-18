@@ -26,5 +26,11 @@ public class Main {
         System.out.println(klass.getNumber());
         System.out.println(klass.getLeader().getName());
         System.out.println(student1.introduce());
+
+        Class klass2 = new Class(3);
+        klass2.assignLeader(student1);
+        klass2.appendMenber(student1);
+        klass2.assignLeader(student1);
+        System.out.println(student1.introduce());
     }
 }

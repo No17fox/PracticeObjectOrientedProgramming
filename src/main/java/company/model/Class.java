@@ -9,11 +9,25 @@ public class Class {
     }
 
     public void assignLeader(Student student) {
-        this.leader = student;
+        if (student.getKlass().equals(this)) {
+            this.leader = student;
+        } else {
+            System.out.println("It is not one of us");
+        }
     }
 
     public void appendMenber(Student student) {
         student.setKlass(this);
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        return this.number == ((Class)object).getNumber();
+    }
+
+    @Override
+    public int hashCode() {
+        return this.number;
     }
 
     public int getNumber() {
