@@ -13,7 +13,7 @@ public class Class {
     }
 
     public void appendMenber(Student student) {
-        student.setaClass(this);
+        student.setKlass(this);
     }
 
     public int getNumber() {
