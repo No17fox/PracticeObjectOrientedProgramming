@@ -5,6 +5,9 @@ import main.java.company.model.Person;
 import main.java.company.model.Student;
 import main.java.company.model.Teacher;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -36,7 +39,9 @@ public class Main {
 
         Teacher teacher = new Teacher(0001, "Tom", 20);
         System.out.println(teacher.introduce());
-        Class[] classes = {klass1, klass2};
+        List<Class> classes = new ArrayList<>();
+        classes.add(klass1);
+        classes.add(klass2);
         teacher.setClasses(classes);
         System.out.println(teacher.introduce());
 

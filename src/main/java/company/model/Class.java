@@ -12,7 +12,7 @@ public class Class {
         if (isIn(student)) {
             this.leader = student;
         } else {
-            System.out.println("It is not one of us");
+            System.out.println("It is not one of us.");
         }
     }
 
