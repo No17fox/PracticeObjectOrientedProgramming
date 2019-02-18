@@ -3,6 +3,7 @@ package main.java.company.model;
 public class Class {
     private final int number;
     private Student leader;
+    private Teacher teacher;
 
     public Class(int number) {
         this.number = number;
@@ -11,6 +12,9 @@ public class Class {
     public void assignLeader(Student student) {
         if (isIn(student)) {
             this.leader = student;
+            if (teacher != null) {
+                System.out.println(teacher.noticeAssignLeader(student));
+            }
         } else {
             System.out.println("It is not one of us.");
         }
@@ -18,6 +22,9 @@ public class Class {
 
     public void appendMenber(Student student) {
         student.setKlass(this);
+        if (teacher != null) {
+            System.out.println(teacher.noticeAddAStudent(student));
+        }
     }
 
     public boolean isIn(Student student) {
@@ -26,7 +33,7 @@ public class Class {
 
     @Override
     public boolean equals(Object object) {
-        return this.number == ((Class)object).getNumber();
+        return this.number == ((Class) object).getNumber();
     }
 
     @Override
@@ -40,5 +47,10 @@ public class Class {
 
     public Student getLeader() {
         return this.leader;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+        teacher.setClasses(this);
     }
 }

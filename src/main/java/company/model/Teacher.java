@@ -30,11 +30,19 @@ public class Teacher extends Person {
         return result;
     }
 
+    public String noticeAssignLeader(Student student) {
+        return "I am " + this.getName() + ". I know " + student.getName() + " become Leader of Class " + student.getKlass().getNumber() + ".";
+    }
+
+    public String noticeAddAStudent(Student student) {
+        return "I am " + this.getName() + ". I know " + student.getName() + " has joined Class " + student.getKlass().getNumber() + ".";
+    }
+
     public List<Class> getClasses() {
         return this.classes;
     }
 
-    public void setClasses(List<Class> classes) {
-        this.classes = classes;
+    public void setClasses(Class klass) {
+        this.classes.add(klass);
     }
 }

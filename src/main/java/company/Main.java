@@ -39,17 +39,17 @@ public class Main {
 
         Teacher teacher = new Teacher(0001, "Tom", 20);
         System.out.println(teacher.introduce());
-        List<Class> classes = new ArrayList<>();
-        classes.add(klass1);
-        classes.add(klass2);
-        teacher.setClasses(classes);
+        teacher.setClasses(klass1);
+        teacher.setClasses(klass2);
         System.out.println(teacher.introduce());
 
         System.out.println(teacher.isTeaching(student1));
         Class klass3 = new Class(3);
-        Student student3 = new Student(0001, "Tom", 20, klass3);
+        Student student3 = new Student(0001, "Jerry", 20, klass3);
         System.out.println(teacher.isTeaching(student3));
 
-
+        klass3.setTeacher(teacher);
+        klass3.appendMenber(student3);
+        klass3.assignLeader(student3);
     }
 }
