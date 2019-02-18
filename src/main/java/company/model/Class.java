@@ -1,10 +1,10 @@
 package main.java.company.model;
 
-public class Klass {
+public class Class {
     private final int number;
     private Student leader;
 
-    public Klass(int number) {
+    public Class(int number) {
         this.number = number;
     }
 

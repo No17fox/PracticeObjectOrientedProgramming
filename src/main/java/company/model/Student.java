@@ -1,24 +1,24 @@
 package main.java.company.model;
 
 public class Student extends Person {
-    private Klass klass;
+    private Class aClass;
 
-    public Student(int id, String name, int age, Klass klass) {
+    public Student(int id, String name, int age, Class aClass) {
         super(id, name, age);
-        this.klass = klass;
+        this.aClass = aClass;
     }
 
     @Override
     public String introduce() {
-        boolean isLeader = (this.klass.getLeader() != null) && this.equals(this.klass.getLeader());
+        boolean isLeader = (this.aClass.getLeader() != null) && this.equals(this.aClass.getLeader());
         if (isLeader) {
-            return super.introduce() + "I am a Student. I am Leader of Class " + this.klass.getNumber() + ".";
+            return super.introduce() + "I am a Student. I am Leader of Class " + this.aClass.getNumber() + ".";
         }
-        return super.introduce() + "I am a Student. I am at Class " + this.klass.getNumber() + ".";
+        return super.introduce() + "I am a Student. I am at Class " + this.aClass.getNumber() + ".";
     }
 
-    public Klass getKlass() {
-        return this.klass;
+    public Class getaClass() {
+        return this.aClass;
     }
 
 }

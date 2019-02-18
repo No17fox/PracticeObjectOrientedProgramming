@@ -1,6 +1,6 @@
 package main.java.company;
 
-import main.java.company.model.Klass;
+import main.java.company.model.Class;
 import main.java.company.model.Person;
 import main.java.company.model.Student;
 
@@ -16,15 +16,15 @@ public class Main {
         System.out.println(person1.hashCode() == person2.hashCode());
         System.out.println(person1.hashCode() == person3.hashCode());
 
-        Klass klass = new Klass(2);
-        Student student1 = new Student(0001, "Tom", 20, klass);
-        Student student2 = new Student(0001, "Tom", 20, klass);
+        Class aClass = new Class(2);
+        Student student1 = new Student(0001, "Tom", 20, aClass);
+        Student student2 = new Student(0001, "Tom", 20, aClass);
         System.out.println(student1.introduce());
         System.out.println(student1.equals(student2));
 
-        klass.assignLeader(student1);
-        System.out.println(klass.getNumber());
-        System.out.println(klass.getLeader().getName());
+        aClass.assignLeader(student1);
+        System.out.println(aClass.getNumber());
+        System.out.println(aClass.getLeader().getName());
         System.out.println(student1.introduce());
     }
 }
