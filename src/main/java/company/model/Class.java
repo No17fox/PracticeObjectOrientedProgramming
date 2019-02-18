@@ -12,6 +12,10 @@ public class Class {
         this.leader = student;
     }
 
+    public void appendMenber(Student student) {
+        student.setaClass(this);
+    }
+
     public int getNumber() {
         return this.number;
     }

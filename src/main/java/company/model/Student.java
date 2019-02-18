@@ -21,4 +21,7 @@ public class Student extends Person {
         return this.aClass;
     }
 
+    public void setaClass(Class aClass) {
+        this.aClass = aClass;
+    }
 }
