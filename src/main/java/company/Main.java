@@ -16,15 +16,15 @@ public class Main {
         System.out.println(person1.hashCode() == person2.hashCode());
         System.out.println(person1.hashCode() == person3.hashCode());
 
-        Student student1 = new Student(0001, "Tom", 20, 2);
-        Student student2 = new Student(0001, "Tom", 20, 3);
+        Klass klass = new Klass(2);
+        Student student1 = new Student(0001, "Tom", 20, klass);
+        Student student2 = new Student(0001, "Tom", 20, klass);
         System.out.println(student1.introduce());
         System.out.println(student1.equals(student2));
 
-
-        Klass klass = new Klass(2);
         klass.assignLeader(student1);
         System.out.println(klass.getNumber());
         System.out.println(klass.getLeader().getName());
+        System.out.println(student1.introduce());
     }
 }
