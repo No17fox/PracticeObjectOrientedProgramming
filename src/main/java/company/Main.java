@@ -3,6 +3,7 @@ package main.java.company;
 import main.java.company.model.Class;
 import main.java.company.model.Person;
 import main.java.company.model.Student;
+import main.java.company.model.Teacher;
 
 public class Main {
 
@@ -16,15 +17,15 @@ public class Main {
         System.out.println(person1.hashCode() == person2.hashCode());
         System.out.println(person1.hashCode() == person3.hashCode());
 
-        Class klass = new Class(2);
-        Student student1 = new Student(0001, "Tom", 20, klass);
-        Student student2 = new Student(0001, "Tom", 20, klass);
+        Class klass1 = new Class(2);
+        Student student1 = new Student(0001, "Tom", 20, klass1);
+        Student student2 = new Student(0001, "Tom", 20, klass1);
         System.out.println(student1.introduce());
         System.out.println(student1.equals(student2));
 
-        klass.assignLeader(student1);
-        System.out.println(klass.getNumber());
-        System.out.println(klass.getLeader().getName());
+        klass1.assignLeader(student1);
+        System.out.println(klass1.getNumber());
+        System.out.println(klass1.getLeader().getName());
         System.out.println(student1.introduce());
 
         Class klass2 = new Class(3);
@@ -32,5 +33,12 @@ public class Main {
         klass2.appendMenber(student1);
         klass2.assignLeader(student1);
         System.out.println(student1.introduce());
+
+        Teacher teacher = new Teacher(0001, "Tom", 20);
+        System.out.println(teacher.introduce());
+        Class[] classes = {klass1, klass2};
+        teacher.setClasses(classes);
+        System.out.println(teacher.introduce());
+
     }
 }
