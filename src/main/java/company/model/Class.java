@@ -9,7 +9,7 @@ public class Class {
     }
 
     public void assignLeader(Student student) {
-        if (student.getKlass().equals(this)) {
+        if (isIn(student)) {
             this.leader = student;
         } else {
             System.out.println("It is not one of us");
@@ -18,6 +18,10 @@ public class Class {
 
     public void appendMenber(Student student) {
         student.setKlass(this);
+    }
+
+    public boolean isIn(Student student) {
+        return student.getKlass().equals(this);
     }
 
     @Override
