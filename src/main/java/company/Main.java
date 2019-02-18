@@ -1,5 +1,6 @@
 package main.java.company;
 
+import main.java.company.model.Klass;
 import main.java.company.model.Person;
 import main.java.company.model.Student;
 
@@ -19,5 +20,11 @@ public class Main {
         Student student2 = new Student(0001, "Tom", 20, 3);
         System.out.println(student1.introduce());
         System.out.println(student1.equals(student2));
+
+
+        Klass klass = new Klass(2);
+        klass.assignLeader(student1);
+        System.out.println(klass.getNumber());
+        System.out.println(klass.getLeader().getName());
     }
 }
