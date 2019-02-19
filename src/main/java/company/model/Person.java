@@ -36,4 +36,9 @@ public class Person {
     public int hashCode() {
         return this.id;
     }
+
+    @Override
+    public String toString() {
+        return "Person [id = " + this.id + ", name = " + this.name + ", age = " + this.age + "]";
+    }
 }

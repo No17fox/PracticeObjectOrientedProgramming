@@ -8,7 +8,10 @@ import main.java.company.model.Teacher;
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println("Add a class named Person, it should have field as id, name, and age:!");
         Person person1 = new Person(0001, "Tom", 20);
+        System.out.println(person1.toString());
+
         Person person2 = new Person(0001, "Tom", 20);
         Person person3 = new Person(0002, "Tom", 20);
         System.out.println(person1.introduce());
