@@ -12,9 +12,11 @@ public class Main {
         Person person1 = new Person(0001, "Tom", 20);
         System.out.println(person1.toString());
 
+        System.out.println("\nPerson should have a introduce method:");
+        System.out.println(person1.introduce());
+
         Person person2 = new Person(0001, "Tom", 20);
         Person person3 = new Person(0002, "Tom", 20);
-        System.out.println(person1.introduce());
         System.out.println(person1.equals(person2));
         System.out.println(person1.equals(person3));
         System.out.println(person1.hashCode() == person2.hashCode());
