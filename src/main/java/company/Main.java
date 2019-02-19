@@ -54,10 +54,11 @@ public class Main {
         teacher.setClasses(klass2);
         System.out.println(teacher.introduce());
 
-        System.out.println(teacher.isTeaching(student1));
+        System.out.println("\nTeacher should have a method to judge if a student is in his/her class:");
+        System.out.println("is teaching: " + teacher.isTeaching(student1));
         Class klass3 = new Class(3);
         Student student3 = new Student(0001, "Jerry", 20, klass3);
-        System.out.println(teacher.isTeaching(student3));
+        System.out.println("is teaching: " + teacher.isTeaching(student3));
 
         klass3.setTeacher(teacher);
         klass3.appendMenber(student3);
