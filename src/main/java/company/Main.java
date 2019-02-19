@@ -15,12 +15,13 @@ public class Main {
         System.out.println("\nPerson should have a introduce method:");
         System.out.println(person1.introduce());
 
+        System.out.println("\nPerson should have a method to judge the same person by id:");
         Person person2 = new Person(0001, "Tom", 20);
         Person person3 = new Person(0002, "Tom", 20);
-        System.out.println(person1.equals(person2));
-        System.out.println(person1.equals(person3));
-        System.out.println(person1.hashCode() == person2.hashCode());
-        System.out.println(person1.hashCode() == person3.hashCode());
+        System.out.println("is same person: " + person1.equals(person2));
+        System.out.println("is same person: " + person1.equals(person3));
+        System.out.println("is same person: " + (person1.hashCode() == person2.hashCode()));
+        System.out.println("is same person: " + (person1.hashCode() == person3.hashCode()));
 
         Class klass1 = new Class(1);
         Student student1 = new Student(0001, "Tom", 20, klass1);
