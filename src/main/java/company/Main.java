@@ -27,7 +27,9 @@ public class Main {
         Class klass1 = new Class(1);
         System.out.println(klass1.toString());
 
+        System.out.println("\nAdd a class named Student, it should have field as class in addition to the fields of Person:");
         Student student1 = new Student(0001, "Tom", 20, klass1);
+        System.out.println(student1.toString());
         Student student2 = new Student(0001, "Tom", 20, klass1);
         System.out.println(student1.introduce());
         System.out.println(student1.equals(student2));

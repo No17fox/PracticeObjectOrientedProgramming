@@ -24,4 +24,9 @@ public class Student extends Person {
     public void setKlass(Class klass) {
         this.klass = klass;
     }
+
+    @Override
+    public String toString() {
+        return "Student [id = " + this.getId() + ", name = " + this.getName() + ", age = " + this.getAge() + ", class = " + this.klass.getNumber() + "]";
+    }
 }
