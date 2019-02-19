@@ -56,6 +56,15 @@ public class Class {
 
     @Override
     public String toString() {
-        return "Class [number = " + this.number + ", leader = " + this.leader + ", teacher = " + this.teacher + "]";
+        if (this.leader == null && this.teacher == null) {
+            return "Class [number = " + this.number + "]";
+        }
+        if (this.leader != null && this.teacher == null) {
+            return "Class [number = " + this.number + ", leader = " + this.leader.getName() + "]";
+        }
+        if (this.teacher != null && this.leader == null) {
+            return "Class [number = " + this.number + ", teacher = " + this.teacher.getName() + "]";
+        }
+        return "Class [number = " + this.number + ", leader = " + this.leader.getName() + ", teacher = " + this.teacher.getName() + "]";
     }
 }

@@ -33,12 +33,10 @@ public class Main {
 
         System.out.println("\nStudent should have a introduce method:");
         System.out.println(student1.introduce());
-        Student student2 = new Student(0001, "Tom", 20, klass1);
-        System.out.println(student1.equals(student2));
 
+        System.out.println("\nClass should have a method to assignLeader:");
         klass1.assignLeader(student1);
-        System.out.println(klass1.getNumber());
-        System.out.println(klass1.getLeader().getName());
+        System.out.println(klass1.toString());
         System.out.println(student1.introduce());
 
         Class klass2 = new Class(2);
