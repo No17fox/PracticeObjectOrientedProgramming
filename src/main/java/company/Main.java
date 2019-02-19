@@ -60,7 +60,9 @@ public class Main {
         Student student3 = new Student(0001, "Jerry", 20, klass3);
         System.out.println("is teaching: " + teacher.isTeaching(student3));
 
+        System.out.println("\nTeacher should noice the changes in class member:");
         klass3.setTeacher(teacher);
+        System.out.println(klass3.toString());
         klass3.appendMenber(student3);
         klass3.assignLeader(student3);
     }
