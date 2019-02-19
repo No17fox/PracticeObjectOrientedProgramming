@@ -30,8 +30,10 @@ public class Main {
         System.out.println("\nAdd a class named Student, it should have field as class in addition to the fields of Person:");
         Student student1 = new Student(0001, "Tom", 20, klass1);
         System.out.println(student1.toString());
-        Student student2 = new Student(0001, "Tom", 20, klass1);
+
+        System.out.println("\nStudent should have a introduce method:");
         System.out.println(student1.introduce());
+        Student student2 = new Student(0001, "Tom", 20, klass1);
         System.out.println(student1.equals(student2));
 
         klass1.assignLeader(student1);
