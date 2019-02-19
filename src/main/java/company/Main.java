@@ -5,9 +5,6 @@ import main.java.company.model.Person;
 import main.java.company.model.Student;
 import main.java.company.model.Teacher;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
