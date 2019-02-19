@@ -53,4 +53,9 @@ public class Class {
         this.teacher = teacher;
         teacher.setClasses(this);
     }
+
+    @Override
+    public String toString() {
+        return "Class [number = " + this.number + ", leader = " + this.leader + ", teacher = " + this.teacher + "]";
+    }
 }

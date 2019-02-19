@@ -8,7 +8,7 @@ import main.java.company.model.Teacher;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Add a class named Person, it should have field as id, name, and age:!");
+        System.out.println("Add a class named Person, it should have field as id, name, and age:");
         Person person1 = new Person(0001, "Tom", 20);
         System.out.println(person1.toString());
 
@@ -23,7 +23,10 @@ public class Main {
         System.out.println("is same person: " + (person1.hashCode() == person2.hashCode()));
         System.out.println("is same person: " + (person1.hashCode() == person3.hashCode()));
 
+        System.out.println("\nAdd a class named Class, it should have field as number, leader, and teacher:");
         Class klass1 = new Class(1);
+        System.out.println(klass1.toString());
+
         Student student1 = new Student(0001, "Tom", 20, klass1);
         Student student2 = new Student(0001, "Tom", 20, klass1);
         System.out.println(student1.introduce());
