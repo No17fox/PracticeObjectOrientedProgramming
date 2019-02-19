@@ -38,14 +38,17 @@ public class Main {
         klass1.assignLeader(student1);
         System.out.println(klass1.toString());
         System.out.println(student1.introduce());
-
         Class klass2 = new Class(2);
         klass2.assignLeader(student1);
         klass2.appendMenber(student1);
         klass2.assignLeader(student1);
         System.out.println(student1.introduce());
 
+        System.out.println("\nAdd a class named Teacher, it should have field as classes in addition to the fields of Person:");
         Teacher teacher = new Teacher(0001, "Tom", 20);
+        System.out.println(teacher.toString());
+
+        System.out.println("\nTeacher should have a introduce method:");
         System.out.println(teacher.introduce());
         teacher.setClasses(klass1);
         teacher.setClasses(klass2);

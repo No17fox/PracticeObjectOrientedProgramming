@@ -45,4 +45,16 @@ public class Teacher extends Person {
     public void setClasses(Class klass) {
         this.classes.add(klass);
     }
+
+    @Override
+    public String toString() {
+        if (this.classes.isEmpty()) {
+            return "Teacher [id = " + this.getId() + ", name = " + this.getName() + ", age = " + this.getAge() + "]";
+        }
+        List<String> classNumber = new ArrayList<>();
+        for (Class klass : this.classes) {
+            classNumber.add(String.valueOf(klass.getNumber()));
+        }
+        return "Teacher [id = " + this.getId() + ", name = " + this.getName() + ", age = " + this.getAge() + ", class = " + String.join(",", classNumber) + "]";
+    }
 }
